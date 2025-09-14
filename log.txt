@@ -1,0 +1,1292 @@
+2025-09-13 01:50:24 UTC
+macOS-10.16-x86_64-i386-64bit
+Ren'Py 8.4.1.25072401
+
+Early init took 71 ms
+Loading error handling took 29 ms
+Loading script took 223 ms
+Loading save slot metadata took 38 ms
+Loading persistent took 0 ms
+Running init code took 62 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 17 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 47 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 40 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 12 ms
+Save screen analysis took 17 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 497 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080)Resetting cache.
+Early init took 7 ms
+Loading error handling took 24 ms
+Loading script took 68 ms
+Loading save slot metadata took 20 ms
+Loading persistent took 0 ms
+Running init code took 31 ms
+Loading analysis data took 9 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 9 ms
+Dump and make backups took 43 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 47 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 26 ms
+Analyze screens took 1 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 280 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "renpy/ast.py", line 1187, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1260, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+    ~~~~~~~~~~~^^
+  File "renpy/ui.py", line 304, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2219, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )  # type: ignore
+    ^                
+  File "renpy/display/core.py", line 2890, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 1380, in draw_screen
+    surftree = renpy.display.render.render_screen(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        root_widget,
+        ^^^^^^^^^^^^
+        renpy.config.screen_width,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        renpy.config.screen_height,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/display/render.pyx", line 487, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/screen.py", line 767, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1162, in render
+    surf = render(d, width - x, rh, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/behavior.py", line 986, in render
+    rv = super(Button, self).render(width, height, st, at)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/layout.py", line 1442, in render
+    surf = render(child, width - cxmargin - cxpadding, height - cymargin - cypadding, st, at)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/text/text.py", line 2730, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/text/text.py", line 820, in __init__
+    seg_glyphs, rtl = self.glyphs_paragraph(p, order)
+                      ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "renpy/text/text.py", line 1673, in glyphs_paragraph
+    rv.append((ts, ts.glyphs(s[offset:], self, l)))
+                   ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^  
+  File "renpy/text/text.py", line 357, in glyphs
+    fo = font.get_font(
+         ~~~~~~~~~~~~~^
+        self.font,
+        ^^^^^^^^^^
+    ...<11 lines>...
+        self.features,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/text/font.py", line 750, in get_font
+    face = load_face(fn, shaper)
+           ~~~~~~~~~^^^^^^^^^^^^
+  File "renpy/text/font.py", line 668, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font 'fonts/AtkinsonHyperlegible-Regular.ttf'.
+
+While running game code:
+  File "renpy/display/render.pyx", line 487, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+Exception: Could not find font 'fonts/AtkinsonHyperlegible-Regular.ttf'.
+Resetting cache.
+Early init took 11 ms
+Loading error handling took 25 ms
+Loading script took 171 ms
+Loading save slot metadata took 17 ms
+Loading persistent took 0 ms
+Running init code took 43 ms
+Loading analysis data took 12 ms
+Analyze and compile ATL took 3 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 51 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 69 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 26 ms
+Save screen analysis took 27 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 2 ms
+Interface start took 345 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "renpy/ast.py", line 1187, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1260, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+    ~~~~~~~~~~~^^
+  File "renpy/ui.py", line 304, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2219, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )  # type: ignore
+    ^                
+  File "renpy/display/core.py", line 2890, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 1380, in draw_screen
+    surftree = renpy.display.render.render_screen(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        root_widget,
+        ^^^^^^^^^^^^
+        renpy.config.screen_width,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        renpy.config.screen_height,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/display/render.pyx", line 487, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/screen.py", line 767, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1162, in render
+    surf = render(d, width - x, rh, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/behavior.py", line 986, in render
+    rv = super(Button, self).render(width, height, st, at)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/layout.py", line 1442, in render
+    surf = render(child, width - cxmargin - cxpadding, height - cymargin - cypadding, st, at)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/text/text.py", line 2730, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/text/text.py", line 820, in __init__
+    seg_glyphs, rtl = self.glyphs_paragraph(p, order)
+                      ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "renpy/text/text.py", line 1673, in glyphs_paragraph
+    rv.append((ts, ts.glyphs(s[offset:], self, l)))
+                   ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^  
+  File "renpy/text/text.py", line 357, in glyphs
+    fo = font.get_font(
+         ~~~~~~~~~~~~~^
+        self.font,
+        ^^^^^^^^^^
+    ...<11 lines>...
+        self.features,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/text/font.py", line 750, in get_font
+    face = load_face(fn, shaper)
+           ~~~~~~~~~^^^^^^^^^^^^
+  File "renpy/text/font.py", line 668, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font 'gui/ fonts/AtkinsonHyperlegible-Regular.ttf'.
+
+While running game code:
+  File "renpy/display/render.pyx", line 487, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+Exception: Could not find font 'gui/ fonts/AtkinsonHyperlegible-Regular.ttf'.
+Resetting cache.
+Early init took 30 ms
+Loading error handling took 20 ms
+Loading script took 114 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 29 ms
+Loading analysis data took 9 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 41 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 49 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 15 ms
+Save screen analysis took 16 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 267 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 29 ms
+Loading error handling took 30 ms
+Loading script took 176 ms
+Loading save slot metadata took 27 ms
+Loading persistent took 0 ms
+Running init code took 51 ms
+Loading analysis data took 14 ms
+Analyze and compile ATL took 3 ms
+Reloading save slot metadata took 14 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 52 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 65 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 3 ms
+Analyze screens took 14 ms
+Save screen analysis took 15 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 283 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 19 ms
+Loading error handling took 26 ms
+Loading script took 208 ms
+Loading save slot metadata took 25 ms
+Loading persistent took 0 ms
+Running init code took 42 ms
+Loading analysis data took 13 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 18 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 48 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 71 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 2 ms
+Analyze screens took 20 ms
+Save screen analysis took 21 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 2 ms
+Interface start took 372 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 8 ms
+Loading error handling took 33 ms
+Loading script took 200 ms
+Loading save slot metadata took 27 ms
+Loading persistent took 0 ms
+Running init code took 39 ms
+Loading analysis data took 14 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 15 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 45 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 60 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 3 ms
+Analyze screens took 15 ms
+Save screen analysis took 16 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 311 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Cleaning stores took 0 ms
+Load screen analysis took 26 ms
+Analyze screens took 0 ms
+Running _start took 1 ms
+Resetting cache.
+Early init took 8 ms
+Loading error handling took 33 ms
+Loading script took 190 ms
+Loading save slot metadata took 23 ms
+Loading persistent took 0 ms
+
+File "game/ui_styles.rpy", line 99: expected statement.
+    .
+    ^
+DPI scale factor: 1.000000
+Interface start took 113 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 8 ms
+Loading error handling took 25 ms
+Loading script took 343 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 0 ms
+
+File "game/ui_styles.rpy", line 99: expected statement.
+    .
+    ^
+DPI scale factor: 1.000000
+Interface start took 91 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 17 ms
+Loading script took 65 ms
+Loading save slot metadata took 20 ms
+Loading persistent took 0 ms
+
+File "game/ui_styles.rpy", line 99: expected statement.
+    .
+    ^
+DPI scale factor: 1.000000
+Interface start took 88 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 9 ms
+Loading error handling took 27 ms
+Loading script took 128 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 0 ms
+Running init code took 57 ms
+Loading analysis data took 5 ms
+Analyze and compile ATL took 4 ms
+Reloading save slot metadata took 16 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 44 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 44 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 2 ms
+Analyze screens took 15 ms
+Save screen analysis took 16 ms
+Save pyanalysis took 6 ms
+Save bytecode took 2 ms
+Running _start took 1 ms
+Interface start took 319 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "renpy/ast.py", line 1187, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1260, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+    ~~~~~~~~~~~^^
+  File "renpy/ui.py", line 304, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2219, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )  # type: ignore
+    ^                
+  File "renpy/display/core.py", line 2757, in interact_core
+    root_widget.visit_all(lambda d: d.per_interact())
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 432, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 432, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 432, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/screen.py", line 508, in visit_all
+    self.child.visit_all(callback, seen=None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 432, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 423, in visit_all
+    for d in self.visit():
+             ~~~~~~~~~~^^ 
+  File "renpy/atl.py", line 821, in visit
+    block = self.compile()
+            ~~~~~~~~~~~~^^
+  File "renpy/atl.py", line 732, in compile
+    block = self.atl.compile(self.context)
+            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "renpy/atl.py", line 926, in compile
+    statements = [i.compile(ctx) for i in self.statements]
+                  ~~~~~~~~~^^^^^                          
+  File "renpy/atl.py", line 1288, in compile
+    raise Exception(
+        "Expression %r is not an ATL transform, and so cannot be included in an ATL interpolation." % expr
+    )
+Exception: Expression 'set' is not an ATL transform, and so cannot be included in an ATL interpolation.
+
+Compiling ATL code at game/screens.rpy:421
+Exception: Expression 'set' is not an ATL transform, and so cannot be included in an ATL interpolation.
+Resetting cache.
+Early init took 9 ms
+Loading error handling took 21 ms
+Loading script took 400 ms
+Loading save slot metadata took 26 ms
+Loading persistent took 0 ms
+Running init code took 57 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 3 ms
+Reloading save slot metadata took 76 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 66 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 66 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 2 ms
+Analyze screens took 14 ms
+Save screen analysis took 15 ms
+Save pyanalysis took 6 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 289 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 21 ms
+Loading error handling took 22 ms
+Loading script took 545 ms
+Loading save slot metadata took 33 ms
+Loading persistent took 0 ms
+Running init code took 52 ms
+Loading analysis data took 5 ms
+Analyze and compile ATL took 3 ms
+Reloading save slot metadata took 17 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 58 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 65 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 18 ms
+Save screen analysis took 17 ms
+Save pyanalysis took 6 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 364 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 10 ms
+Loading error handling took 18 ms
+Loading script took 383 ms
+Loading save slot metadata took 28 ms
+Loading persistent took 0 ms
+Running init code took 43 ms
+Loading analysis data took 4 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 21 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 43 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 59 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 3 ms
+Analyze screens took 15 ms
+Save screen analysis took 15 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 310 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 21 ms
+Loading error handling took 15 ms
+Loading script took 446 ms
+Loading save slot metadata took 65 ms
+Loading persistent took 0 ms
+Running init code took 60 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 3 ms
+Reloading save slot metadata took 29 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 73 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 63 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 3 ms
+Analyze screens took 17 ms
+Save screen analysis took 15 ms
+Save pyanalysis took 6 ms
+Save bytecode took 2 ms
+Running _start took 1 ms
+Interface start took 274 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 24 ms
+Loading error handling took 20 ms
+Loading script took 402 ms
+Loading save slot metadata took 32 ms
+Loading persistent took 0 ms
+Running init code took 48 ms
+Loading analysis data took 4 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 18 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 48 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 58 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 3 ms
+Analyze screens took 12 ms
+Save screen analysis took 15 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 307 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 11 ms
+Loading error handling took 21 ms
+Loading script took 401 ms
+Loading save slot metadata took 27 ms
+Loading persistent took 0 ms
+Running init code took 43 ms
+Loading analysis data took 4 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 21 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 42 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 53 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 11 ms
+Save screen analysis took 14 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 303 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 10 ms
+Loading error handling took 16 ms
+Loading script took 348 ms
+Loading save slot metadata took 27 ms
+Loading persistent took 0 ms
+Running init code took 38 ms
+Loading analysis data took 5 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 16 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 43 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 63 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 2 ms
+Analyze screens took 14 ms
+Save screen analysis took 15 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 300 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 8 ms
+Loading error handling took 20 ms
+Loading script took 414 ms
+Loading save slot metadata took 24 ms
+Loading persistent took 0 ms
+Running init code took 46 ms
+Loading analysis data took 4 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 18 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 44 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 60 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 2 ms
+Analyze screens took 12 ms
+Save screen analysis took 15 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 311 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 15 ms
+Loading script took 184 ms
+Loading save slot metadata took 29 ms
+Loading persistent took 0 ms
+
+File "game/screens.rpy", line 430: 'show' is not a keyword argument or valid child of the screen statement.
+    show expression Movie("images/main_menu/letter_A.webm", loop=True) at truecenter
+        ^
+DPI scale factor: 1.000000
+Interface start took 104 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 11 ms
+Loading error handling took 18 ms
+Loading script took 226 ms
+Loading save slot metadata took 32 ms
+Loading persistent took 0 ms
+
+File "game/screens.rpy", line 439: 'show' is not a keyword argument or valid child of the hbox statement.
+    show expression Movie("images/main_menu/letter_A.webm", loop=True) at truecenter
+        ^
+DPI scale factor: 1.000000
+Interface start took 126 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 14 ms
+Loading script took 144 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 0 ms
+
+File "game/screens.rpy", line 431: 'show' is not a keyword argument or valid child of the screen statement.
+    show expression Movie("images/main_menu/letter_A.webm", loop=True) at truecenter
+        ^
+DPI scale factor: 1.000000
+Interface start took 97 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 9 ms
+Loading error handling took 27 ms
+Loading script took 233 ms
+Loading save slot metadata took 23 ms
+Loading persistent took 0 ms
+
+File "game/screens.rpy", line 431: 'Movie' is not a keyword argument or valid child of the add statement.
+    add expression Movie("images/main_menu/letter_A.webm", loop=True) at truecenter
+                        ^
+DPI scale factor: 1.000000
+Interface start took 89 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 9 ms
+Loading error handling took 24 ms
+Loading script took 204 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+
+File "game/screens.rpy", line 439: 'Movie' is not a keyword argument or valid child of the add statement.
+    add expression Movie("images/main_menu/letter_A.webm", loop=True) at truecenter
+                        ^
+DPI scale factor: 1.000000
+Interface start took 197 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 14 ms
+Loading error handling took 22 ms
+Loading script took 182 ms
+Loading save slot metadata took 23 ms
+Loading persistent took 1 ms
+
+File "game/screens.rpy", line 439: 'Movie' is not a keyword argument or valid child of the add statement.
+    add expression Movie("images/main_menu/letter_A.webm", loop=True) at truecenter
+                        ^
+DPI scale factor: 1.000000
+Interface start took 104 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 15 ms
+Loading script took 314 ms
+Loading save slot metadata took 16 ms
+Loading persistent took 0 ms
+Running init code took 83 ms
+Loading analysis data took 5 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 19 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 43 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 54 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 2 ms
+Analyze screens took 12 ms
+Save screen analysis took 15 ms
+Save pyanalysis took 0 ms
+Save bytecode took 3 ms
+Running _start took 1 ms
+Interface start took 386 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 28 ms
+Loading error handling took 21 ms
+Loading script took 257 ms
+Loading save slot metadata took 26 ms
+Loading persistent took 0 ms
+
+File "game/screens.rpy", line 447: 'xmaximum' is not a keyword argument or valid child of the add statement.
+    add Solid("#FF00FF") xmaximum 640 ymaximum 200
+                                 ^
+DPI scale factor: 1.000000
+Interface start took 108 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 9 ms
+Loading error handling took 19 ms
+Loading script took 324 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 45 ms
+Loading analysis data took 5 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 16 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 44 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 58 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 2 ms
+Analyze screens took 15 ms
+Save screen analysis took 16 ms
+Save pyanalysis took 6 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 338 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 8 ms
+Loading error handling took 16 ms
+Loading script took 360 ms
+Loading save slot metadata took 23 ms
+Loading persistent took 0 ms
+Running init code took 61 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 4 ms
+Reloading save slot metadata took 12 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 71 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 122 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 26 ms
+Save screen analysis took 28 ms
+Save pyanalysis took 6 ms
+Save bytecode took 2 ms
+Running _start took 1 ms
+Interface start took 339 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 8 ms
+Loading error handling took 15 ms
+Loading script took 409 ms
+Loading save slot metadata took 16 ms
+Loading persistent took 0 ms
+Running init code took 42 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 11 ms
+Backing up script files to '/Users/andrew/Library/RenPy/backups/strahdica':
+Dump and make backups took 53 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 88 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 16 ms
+Save screen analysis took 17 ms
+Save pyanalysis took 7 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 517 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1680, 1050)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon Pro 560 OpenGL Engine'
+Version: '2.1 ATI-4.14.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1680, 'current_h': 1050, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1356, 763) drawable=(1356, 763)
+Maximum texture size: 4096x4096

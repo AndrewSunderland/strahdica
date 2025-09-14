@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/screens.rpy", line 447: 'xmaximum' is not a keyword argument or valid child of the add statement.
+    add Solid("#FF00FF") xmaximum 640 ymaximum 200
+                                 ^
+
+Ren'Py Version: Ren'Py 8.4.1.25072401
+Fri Sep 12 19:56:13 2025

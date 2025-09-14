@@ -1,0 +1,74 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+Compiling ATL code at game/screens.rpy:421
+Exception: Expression 'set' is not an ATL transform, and so cannot be included in an ATL interpolation.
+
+-- Full Traceback ------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "renpy/ast.py", line 1187, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1260, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+    ~~~~~~~~~~~^^
+  File "renpy/ui.py", line 304, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2219, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )  # type: ignore
+    ^                
+  File "renpy/display/core.py", line 2757, in interact_core
+    root_widget.visit_all(lambda d: d.per_interact())
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 432, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 432, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 432, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/screen.py", line 508, in visit_all
+    self.child.visit_all(callback, seen=None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 432, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 423, in visit_all
+    for d in self.visit():
+             ~~~~~~~~~~^^ 
+  File "renpy/atl.py", line 821, in visit
+    block = self.compile()
+            ~~~~~~~~~~~~^^
+  File "renpy/atl.py", line 732, in compile
+    block = self.atl.compile(self.context)
+            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "renpy/atl.py", line 926, in compile
+    statements = [i.compile(ctx) for i in self.statements]
+                  ~~~~~~~~~^^^^^                          
+  File "renpy/atl.py", line 1288, in compile
+    raise Exception(
+        "Expression %r is not an ATL transform, and so cannot be included in an ATL interpolation." % expr
+    )
+Exception: Expression 'set' is not an ATL transform, and so cannot be included in an ATL interpolation.
+
+macOS-10.16-x86_64-i386-64bit x86_64
+Ren'Py 8.4.1.25072401
+strahdica 1.0
+Fri Sep 12 19:04:22 2025
