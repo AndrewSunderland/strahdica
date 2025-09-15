@@ -412,9 +412,7 @@ transform logo_float:
     linear 3.5 ypos 0.185
     repeat
 
-image letter_A = Movie("images/main_menu/letterA.webm", loop=True)
-
-
+    # ... rest of menu (buttons etc.) ...
 screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
@@ -428,32 +426,17 @@ screen main_menu():
         yfill True
         xsize 460
 
-    hbox:
-        xpos 0.5
-        xanchor 0.5
-        ypos 0.18
-        spacing 12
-
-        # Try the keyed webm first
-        if renpy.loadable("images/main_menu/letterA.webm"):
-            add Movie("images/main_menu/letterA.webm", loop=True)
-
-        # Fallback: test an MP4 without alpha (create via ffmpeg if needed)
-        elif renpy.loadable("images/main_menu/a.mp4"):
-            add Movie("images/main_menu/a.mp4", loop=True)
-
-        # Final fallback: visible solid with text so we know the area is correct
-        else:
-            fixed:
-                add Solid("#FF00FF") xsize 640 ysize 200
-                text "MOVIE MISSING" xalign 0.5 yalign 0.5
-
-
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
     use navigation
 
-    
+    if gui.show_name:
+        text "[config.name!t]":
+            style "main_menu_title"
+            xpos 0.12
+            xanchor 0.5
+            ypos 0.20
+            at logo_float
 
 
 style main_menu_frame is empty
