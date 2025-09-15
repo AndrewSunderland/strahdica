@@ -435,7 +435,7 @@ screen main_menu():
             style "main_menu_title"
             xpos 0.12
             xanchor 0.5
-            ypos 0.20
+            ypos 0.10
             # at logo_float
 
 
