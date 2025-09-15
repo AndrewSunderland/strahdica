@@ -424,14 +424,6 @@ screen main_menu():
     ## contents of the main menu are in the navigation screen.
     use navigation
 
-    # if gui.show_name:
-    #     text "[config.name!t]":
-    #         style "main_menu_title"
-    #         xpos 0.12
-    #         xanchor 0.5
-    #         ypos 0.10
-    #         # at logo_float
-
     add "mm_logo" xpos 0.12 xanchor 0.5 ypos 0.05 at mm_logo_float, Transform(zoom=0.25)
 
 style main_menu_frame is empty
@@ -1218,6 +1210,7 @@ screen confirm(message, yes_action, no_action):
 
     add "gui/overlay/confirm.png"
 
+    # Centered themed frame.
     frame:
 
         vbox:
@@ -1233,10 +1226,17 @@ screen confirm(message, yes_action, no_action):
                 xalign 0.5
                 spacing 150
 
-                textbutton _("Yes") action yes_action
-                textbutton _("No") action no_action
+                textbutton _("Yes"):
+                    action yes_action
+                    style "confirm_button"
+                    xminimum 180
 
-    ## Right-click and escape answer "no".
+                textbutton _("No"):
+                    action no_action
+                    style "confirm_button"
+                    xminimum 180
+
+    # Right-click / Escape should act like "No".
     key "game_menu" action no_action
 
 
@@ -1247,7 +1247,7 @@ style confirm_button is gui_medium_button
 style confirm_button_text is gui_medium_button_text
 
 style confirm_frame:
-    background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+    background Frame([ "gui/confirm_frame.png", "gui/window_base.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
     padding gui.confirm_frame_borders.padding
     xalign .5
     yalign .5

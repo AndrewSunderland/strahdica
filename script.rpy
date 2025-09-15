@@ -71,11 +71,11 @@ transform thumb_dim:
 
 screen character_select:
     default characters = [
-        ("corin", "placeholder/corin base.png", corin_char),
-        ("bridget", "placeholder/bridget base.png", bridget_char),
-        ("jacira", "placeholder/jacira base.png", jacira_char),
-        ("kokali", "placeholder/kokali base.png", kokali_char),
-        ("taniel", "placeholder/taniel base.png", taniel_char),
+        ("corin", "PCs/Corin/corin base.png", corin_char),
+        ("bridget", "PCs/Bridget/bridget base.png", bridget_char),
+        ("jacira", "PCs/Jacira/jacira base.png", jacira_char),
+        ("kokali", "PCs/Kokali/kokali base.png", kokali_char),
+        ("taniel", "PCs/Taniel/taniel base.png", taniel_char),
     ]
     tag menu
     
@@ -100,8 +100,8 @@ screen character_select:
                     ysize 510
 
                     imagebutton:
-                        idle img
-                        hover img
+                        idle im.Scale(img, 1024, 1536)
+                        hover im.Scale(img, 1024, 1536)
                         at current_tf
                         xpos 0.5
                         xanchor 0.5
@@ -149,10 +149,10 @@ label after_select:
 
     strahd_char "I am Strahd blah blah blah."
 
-    show expression "{} base".format(player_prefix) at Transform(xalign=0.0, yalign=0.5, zoom=0.70)
+    show expression "{} base".format(player_prefix) at Transform(xalign=0.0, yalign=0.5, zoom=1.5)
     player_char "Hello Strahd, I am [player_char.name]."
 
-    show strahd base2 at Transform(xalign=1.0, yalign=0.5, zoom=0.70)
+    show strahd happy at Transform(xalign=1.0, yalign=0.5, zoom=0.70)
 
     strahd_char "How dare you make me angry! I'll rip your arm off!"
 
