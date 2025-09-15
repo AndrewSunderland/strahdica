@@ -418,7 +418,7 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
     add Solid("#0e0c19")
-    add "main_menu_bg"
+    add "main_menu_bg" at mm_bg_shift
 
     frame:
         background Solid("#120607AA")
@@ -436,7 +436,7 @@ screen main_menu():
             xpos 0.12
             xanchor 0.5
             ypos 0.20
-            at logo_float
+            # at logo_float
 
 
 style main_menu_frame is empty
