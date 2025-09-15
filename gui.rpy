@@ -30,7 +30,7 @@ init python:
     gui.hover_color = "#F2E6D2"
     gui.selected_color = "#C48A32"
     gui.insensitive_color = "#6E7A85"
-    gui.accent_color = "#5C1A1F"
+    gui.accent_color = "#9b5050"
     gui.accent_hover_color = "#7A232A"
     gui.choice_button_width = 1180
     gui.choice_button_height = 92
@@ -60,8 +60,8 @@ define gui.idle_small_color = '#aaaaaa'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
-define gui.muted_color = '#3d1466'
-define gui.hover_muted_color = '#5b1e99'
+define gui.muted_color = '#5C1A1F'
+define gui.hover_muted_color = '#7A232A'
 
 ## The colors used for dialogue and menu choice text.
 # define gui.text_color = '#ffffff'
