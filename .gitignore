@@ -1,5 +1,5 @@
-cache/
-saves/
+cache/*
+saves/*
 .DS_Store
-cache\
-saves\
+cache\*
+saves\*
