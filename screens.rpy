@@ -395,24 +395,18 @@ style navigation_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
 image main_menu_bg = "gui/main_menu.png"
+image mm_logo = "gui/strahdica-logo.png"
 
-transform logo_float:
-    ypos 0.10
-    linear 2.5 ypos 0.115
-    linear 2.5 ypos 0.10
+transform mm_logo_float:
+    # small vertical bob - tweak yoffset / timing to taste
+    linear 2.5 yoffset -12
+    linear 2.5 yoffset 0
     repeat
 
 transform mm_bg_shift:
     xoffset 480        # positive moves image right, negative moves it left
     # yoffset 0        # change if you also need vertical adjustment
-# ...existing code...
 
-transform logo_float:
-    linear 3.5 ypos 0.195
-    linear 3.5 ypos 0.185
-    repeat
-
-    # ... rest of menu (buttons etc.) ...
 screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
@@ -430,14 +424,15 @@ screen main_menu():
     ## contents of the main menu are in the navigation screen.
     use navigation
 
-    if gui.show_name:
-        text "[config.name!t]":
-            style "main_menu_title"
-            xpos 0.12
-            xanchor 0.5
-            ypos 0.10
-            # at logo_float
+    # if gui.show_name:
+    #     text "[config.name!t]":
+    #         style "main_menu_title"
+    #         xpos 0.12
+    #         xanchor 0.5
+    #         ypos 0.10
+    #         # at logo_float
 
+    add "mm_logo" xpos 0.12 xanchor 0.5 ypos 0.05 at mm_logo_float, Transform(zoom=0.25)
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
