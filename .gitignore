@@ -1,5 +1,13 @@
-cache/*
-saves/*
+# Ren'Py runtime / user data
+cache/
+caches/
+saves/
+save/
+persistent
+log.txt
+
+# Editor / OS cruft
 .DS_Store
-cache\*
-saves\*
+*.rpyc
+*.rpyb
+screenshots/
