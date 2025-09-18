@@ -5,6 +5,7 @@ saves/
 save/
 persistent
 log.txt
+tl/
 
 # Editor / OS cruft
 .DS_Store
