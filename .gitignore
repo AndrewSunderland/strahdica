@@ -10,5 +10,6 @@ tl/
 # Editor / OS cruft
 .DS_Store
 *.rpyc
+*.rpyc.bak
 *.rpyb
 screenshots/

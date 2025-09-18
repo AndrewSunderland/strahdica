@@ -40,7 +40,7 @@
                         action [
                             SetVariable("player_char", char),
                             SetVariable("player_prefix", name),
-                            Jump("scene_1_start")
+                            Return()
                         ]
                         hovered SetVariable("hovered_character", name)
                         unhovered SetVariable("hovered_character", None)

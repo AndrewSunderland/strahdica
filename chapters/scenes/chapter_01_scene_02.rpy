@@ -1,4 +1,4 @@
-label scene_1_start:
+label chapter_01_scene_02:
     scene expression interior_entrance_day
 
     # This shows a character sprite. A placeholder is used, but you can
