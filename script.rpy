@@ -42,7 +42,11 @@ init -4 python:
             "and some much-needed relaxation, Bridget heads off on a trip with her " + 
             "friend Kokali.",
         "jacira": "Jacira - A young dusk elf warlock with a dark past. She is trying to escape her cultlike upbringing and find her own path.",
-        "kokali": "Kokali - A wise elf warlock. They seek knowledge and reading but want to escape their pact with an abusive ex.",
+        "kokali": "Kokali was raised in the feywilds but left when a suitor, named " + 
+            "Kuzco, drew him in with a promise of a library of their desires.  He " + 
+            "failed to be a dutiful husband and courtier when he saw how terrible " + 
+            "his husband treated his people. Kokali left at the age of 125 with " + 
+            "only a parting gift of warlock patronage and a desire to be better.",
         "taniel": "Taniel - A charming dhampir rogue. He is trying to discover his origins as half vampire and half vistani.",
     }
 
